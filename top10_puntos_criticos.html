@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_4bf32b34168b3e6d16085c32fb1a95ed {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_4bf32b34168b3e6d16085c32fb1a95ed" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_4bf32b34168b3e6d16085c32fb1a95ed = L.map(
+                "map_4bf32b34168b3e6d16085c32fb1a95ed",
+                {
+                    center: [-34.6037, -58.3816],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d78fd6cf978e9d7628ebcaec69fc2751 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d78fd6cf978e9d7628ebcaec69fc2751.addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var marker_f65cddba273ab9ca4617a1cc408789fd = L.marker(
+                [-34.608293677033124, -58.40088674725499],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_6677f3c37d14b9a93df06786d3eef3ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_25d972a0045c4aae87d1416ebcfcb8cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b6b94697f7c63faf04db8b339e03ea5f = $(`<div id="html_b6b94697f7c63faf04db8b339e03ea5f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #1</h4>         <b>Cluster ID:</b> 178<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 13,484<br>         <b>Casos Graves:</b> 467<br>         <b>Casos Mortales:</b> 106<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.6083 | Lon: -58.4009</small>     </div>     </div>`)[0];
+                popup_25d972a0045c4aae87d1416ebcfcb8cf.setContent(html_b6b94697f7c63faf04db8b339e03ea5f);
+            
+        
+
+        marker_f65cddba273ab9ca4617a1cc408789fd.bindPopup(popup_25d972a0045c4aae87d1416ebcfcb8cf)
+        ;
+
+        
+    
+    
+            marker_f65cddba273ab9ca4617a1cc408789fd.bindTooltip(
+                `<div>
+                     Punto Crítico #1 (13484 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f65cddba273ab9ca4617a1cc408789fd.setIcon(icon_6677f3c37d14b9a93df06786d3eef3ed);
+            
+    
+            var marker_a857bfe7c3a3e733378369d260788717 = L.marker(
+                [-34.6224322170104, -58.45262001024399],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_92ef90abfd8107952fe28770f15b7e32 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2863920c0169c85bd6163aceb5714bb9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c78f6e0555e0063ed44d29779452e7a8 = $(`<div id="html_c78f6e0555e0063ed44d29779452e7a8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #2</h4>         <b>Cluster ID:</b> 95<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 5,032<br>         <b>Casos Graves:</b> 192<br>         <b>Casos Mortales:</b> 48<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.6224 | Lon: -58.4526</small>     </div>     </div>`)[0];
+                popup_2863920c0169c85bd6163aceb5714bb9.setContent(html_c78f6e0555e0063ed44d29779452e7a8);
+            
+        
+
+        marker_a857bfe7c3a3e733378369d260788717.bindPopup(popup_2863920c0169c85bd6163aceb5714bb9)
+        ;
+
+        
+    
+    
+            marker_a857bfe7c3a3e733378369d260788717.bindTooltip(
+                `<div>
+                     Punto Crítico #2 (5032 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a857bfe7c3a3e733378369d260788717.setIcon(icon_92ef90abfd8107952fe28770f15b7e32);
+            
+    
+            var marker_a4a9cf2a9ce9e5643036e03270898e11 = L.marker(
+                [-34.597086125591396, -58.43858851354093],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_79302e10183201c9d7d612462df5e649 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c1fefa3540ea1454a26047d10843f784 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_abbd47064a5a91a3c8de6abb70c69f37 = $(`<div id="html_abbd47064a5a91a3c8de6abb70c69f37" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #3</h4>         <b>Cluster ID:</b> 215<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 1,668<br>         <b>Casos Graves:</b> 65<br>         <b>Casos Mortales:</b> 15<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.5971 | Lon: -58.4386</small>     </div>     </div>`)[0];
+                popup_c1fefa3540ea1454a26047d10843f784.setContent(html_abbd47064a5a91a3c8de6abb70c69f37);
+            
+        
+
+        marker_a4a9cf2a9ce9e5643036e03270898e11.bindPopup(popup_c1fefa3540ea1454a26047d10843f784)
+        ;
+
+        
+    
+    
+            marker_a4a9cf2a9ce9e5643036e03270898e11.bindTooltip(
+                `<div>
+                     Punto Crítico #3 (1668 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a4a9cf2a9ce9e5643036e03270898e11.setIcon(icon_79302e10183201c9d7d612462df5e649);
+            
+    
+            var marker_116033c26fc358cdab849799da7e6dab = L.marker(
+                [-34.55519342602499, -58.46222714626114],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_cdbdc5aa67902237a6fe60bddc724949 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_682009ddff9fc570211c0e644fab8939 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e307f0a3c89d02929fe477567dbefae2 = $(`<div id="html_e307f0a3c89d02929fe477567dbefae2" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #4</h4>         <b>Cluster ID:</b> 487<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 1,475<br>         <b>Casos Graves:</b> 73<br>         <b>Casos Mortales:</b> 17<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.5552 | Lon: -58.4622</small>     </div>     </div>`)[0];
+                popup_682009ddff9fc570211c0e644fab8939.setContent(html_e307f0a3c89d02929fe477567dbefae2);
+            
+        
+
+        marker_116033c26fc358cdab849799da7e6dab.bindPopup(popup_682009ddff9fc570211c0e644fab8939)
+        ;
+
+        
+    
+    
+            marker_116033c26fc358cdab849799da7e6dab.bindTooltip(
+                `<div>
+                     Punto Crítico #4 (1475 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_116033c26fc358cdab849799da7e6dab.setIcon(icon_cdbdc5aa67902237a6fe60bddc724949);
+            
+    
+            var marker_fb829a8798cb7c3054d4323a1a0b0f59 = L.marker(
+                [-34.621438558227794, -58.36661641168809],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_ed0f87d61b6a7d7698cb9964c78f54d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7536e0f81d0c1e11f7813bb026deec75 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8aa3ecb2a13d4c00b3cd8d4f12c8ac9b = $(`<div id="html_8aa3ecb2a13d4c00b3cd8d4f12c8ac9b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #5</h4>         <b>Cluster ID:</b> 251<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 789<br>         <b>Casos Graves:</b> 31<br>         <b>Casos Mortales:</b> 10<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.6214 | Lon: -58.3666</small>     </div>     </div>`)[0];
+                popup_7536e0f81d0c1e11f7813bb026deec75.setContent(html_8aa3ecb2a13d4c00b3cd8d4f12c8ac9b);
+            
+        
+
+        marker_fb829a8798cb7c3054d4323a1a0b0f59.bindPopup(popup_7536e0f81d0c1e11f7813bb026deec75)
+        ;
+
+        
+    
+    
+            marker_fb829a8798cb7c3054d4323a1a0b0f59.bindTooltip(
+                `<div>
+                     Punto Crítico #5 (789 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb829a8798cb7c3054d4323a1a0b0f59.setIcon(icon_ed0f87d61b6a7d7698cb9964c78f54d8);
+            
+    
+            var marker_c6ad8aa34930f0603207197a5cdb5b15 = L.marker(
+                [-34.63964315407294, -58.52604422124958],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_1e11931dba453e258d7fae3202c05fb7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c3810471a10472ab8888fc3e8402f340 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9e935793766e15cba1bcd52de778aa98 = $(`<div id="html_9e935793766e15cba1bcd52de778aa98" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #6</h4>         <b>Cluster ID:</b> 83<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 537<br>         <b>Casos Graves:</b> 20<br>         <b>Casos Mortales:</b> 7<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.6396 | Lon: -58.5260</small>     </div>     </div>`)[0];
+                popup_c3810471a10472ab8888fc3e8402f340.setContent(html_9e935793766e15cba1bcd52de778aa98);
+            
+        
+
+        marker_c6ad8aa34930f0603207197a5cdb5b15.bindPopup(popup_c3810471a10472ab8888fc3e8402f340)
+        ;
+
+        
+    
+    
+            marker_c6ad8aa34930f0603207197a5cdb5b15.bindTooltip(
+                `<div>
+                     Punto Crítico #6 (537 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c6ad8aa34930f0603207197a5cdb5b15.setIcon(icon_1e11931dba453e258d7fae3202c05fb7);
+            
+    
+            var marker_a197da19d921d0b5979abd4bee0a5648 = L.marker(
+                [-34.58511430418953, -58.40141897947338],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_27b16d26b315fb6593169e093815d0fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ae7f9dd24d5c049f071dc123a0bff40 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8151322e0a301d39a88eaff1bb5a6da4 = $(`<div id="html_8151322e0a301d39a88eaff1bb5a6da4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #7</h4>         <b>Cluster ID:</b> 299<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 511<br>         <b>Casos Graves:</b> 26<br>         <b>Casos Mortales:</b> 4<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.5851 | Lon: -58.4014</small>     </div>     </div>`)[0];
+                popup_4ae7f9dd24d5c049f071dc123a0bff40.setContent(html_8151322e0a301d39a88eaff1bb5a6da4);
+            
+        
+
+        marker_a197da19d921d0b5979abd4bee0a5648.bindPopup(popup_4ae7f9dd24d5c049f071dc123a0bff40)
+        ;
+
+        
+    
+    
+            marker_a197da19d921d0b5979abd4bee0a5648.bindTooltip(
+                `<div>
+                     Punto Crítico #7 (511 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a197da19d921d0b5979abd4bee0a5648.setIcon(icon_27b16d26b315fb6593169e093815d0fe);
+            
+    
+            var marker_0beec5c053023d3e542c6fe34145b6a9 = L.marker(
+                [-34.60132135121911, -58.369884597666065],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_12ed2fa64444fadac160dc67e68c77f8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1fd79ed410bbda8c6f67a0491659cb15 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_34bb8772ca683fa4b8148c575a5a1e47 = $(`<div id="html_34bb8772ca683fa4b8148c575a5a1e47" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #8</h4>         <b>Cluster ID:</b> 283<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 468<br>         <b>Casos Graves:</b> 28<br>         <b>Casos Mortales:</b> 10<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.6013 | Lon: -58.3699</small>     </div>     </div>`)[0];
+                popup_1fd79ed410bbda8c6f67a0491659cb15.setContent(html_34bb8772ca683fa4b8148c575a5a1e47);
+            
+        
+
+        marker_0beec5c053023d3e542c6fe34145b6a9.bindPopup(popup_1fd79ed410bbda8c6f67a0491659cb15)
+        ;
+
+        
+    
+    
+            marker_0beec5c053023d3e542c6fe34145b6a9.bindTooltip(
+                `<div>
+                     Punto Crítico #8 (468 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0beec5c053023d3e542c6fe34145b6a9.setIcon(icon_12ed2fa64444fadac160dc67e68c77f8);
+            
+    
+            var marker_0744f9bc0f3d9026f4de0c54c8eb63c3 = L.marker(
+                [-34.65152812445538, -58.41618749242859],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_28b3af2d38d927717d188b9cf96bdbe4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5738e0539cce147c6dd4fec70465d599 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_01922963506cb6fce715726847941dd3 = $(`<div id="html_01922963506cb6fce715726847941dd3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #9</h4>         <b>Cluster ID:</b> 158<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 423<br>         <b>Casos Graves:</b> 14<br>         <b>Casos Mortales:</b> 3<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.6515 | Lon: -58.4162</small>     </div>     </div>`)[0];
+                popup_5738e0539cce147c6dd4fec70465d599.setContent(html_01922963506cb6fce715726847941dd3);
+            
+        
+
+        marker_0744f9bc0f3d9026f4de0c54c8eb63c3.bindPopup(popup_5738e0539cce147c6dd4fec70465d599)
+        ;
+
+        
+    
+    
+            marker_0744f9bc0f3d9026f4de0c54c8eb63c3.bindTooltip(
+                `<div>
+                     Punto Crítico #9 (423 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0744f9bc0f3d9026f4de0c54c8eb63c3.setIcon(icon_28b3af2d38d927717d188b9cf96bdbe4);
+            
+    
+            var marker_162db212f96da3fb62e513b903f6a88a = L.marker(
+                [-34.549999704964335, -58.49655602905737],
+                {
+}
+            ).addTo(map_4bf32b34168b3e6d16085c32fb1a95ed);
+        
+    
+            var icon_ad60dad92da1981ba2533e4c90f8c2d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "warning-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_294be7e952c7832572e38c4fdd4b0562 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_29da78f72ded11e141bd6fe4cbe385ab = $(`<div id="html_29da78f72ded11e141bd6fe4cbe385ab" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial; width: 200px;">         <h4 style="margin-bottom: 5px; color: #d9534f;">Punto Crítico #10</h4>         <b>Cluster ID:</b> 433<br>         <hr style="margin: 5px 0;">         <b>Total Siniestros:</b> 386<br>         <b>Casos Graves:</b> 31<br>         <b>Casos Mortales:</b> 5<br>         <hr style="margin: 5px 0;">         <small>Lat: -34.5500 | Lon: -58.4966</small>     </div>     </div>`)[0];
+                popup_294be7e952c7832572e38c4fdd4b0562.setContent(html_29da78f72ded11e141bd6fe4cbe385ab);
+            
+        
+
+        marker_162db212f96da3fb62e513b903f6a88a.bindPopup(popup_294be7e952c7832572e38c4fdd4b0562)
+        ;
+
+        
+    
+    
+            marker_162db212f96da3fb62e513b903f6a88a.bindTooltip(
+                `<div>
+                     Punto Crítico #10 (386 casos)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_162db212f96da3fb62e513b903f6a88a.setIcon(icon_ad60dad92da1981ba2533e4c90f8c2d0);
+            
+</script>
+</html>
