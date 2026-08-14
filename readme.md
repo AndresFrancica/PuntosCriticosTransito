@@ -15,11 +15,11 @@ Este proyecto aborda el análisis exploratorio de datos (EDA) y la geolocalizaci
 
 ## 🛠️ Tecnologías y Librerías
 
-- **Lenguaje:** Python 3.12
-- **Análisis de Datos:** `pandas`, `numpy`
-- **Geodatos y Mapas:** `geopandas`, `shapely`, `folium`, `matplotlib`
-- **Machine Learning:** `scikit-learn`
-- **Entorno:** Visual Studio Code / Jupyter Notebooks
+* **Lenguaje:** Python 3.12
+* **Análisis de Datos:** `pandas`, `numpy`
+* **Geodatos y Visualización:** `geopandas`, `shapely`, `folium`, `matplotlib`, `seaborn`
+* **Machine Learning:** `scikit-learn` (Clustering con DBSCAN)
+* **Entorno:** Visual Studio Code / Jupyter Notebooks
 
 ---
 
