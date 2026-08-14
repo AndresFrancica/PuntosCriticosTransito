@@ -1,0 +1,10 @@
+# Entorno virtual
+venv/
+.venv/
+
+# Cache de Python y Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# Opcional: Archivos muy pesados de datos si no querés que pesen en Git
+# datos/
